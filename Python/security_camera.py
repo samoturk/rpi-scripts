@@ -65,7 +65,7 @@ def record_images(folder, delay, duration, sensitivity, img_size, img_rotate):
     Function that records images
     """
     hashes = []
-    time_to_end = time.time() + delay*60
+    time_to_end = time.time() + duration*60
     while time.time() < time_to_end:
         image = capture_image(size=img_size, sleep=delay).rotate(img_rotate)
         if sensitivity == 'off':
